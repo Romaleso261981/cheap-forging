@@ -9,8 +9,8 @@ export const OrderPage = () => {
 
   return (
     <ContentWrapper className={styles.order}>
-      <h1>Ваш заказ будет доставлен в ближайшее время</h1>
-      <Button containerClassName={ styles.button } onClick={() => navigate('/')}>На главную</Button>
+      <h1>Поки що я рацюю над цією сторінкою Андрій Іванович</h1>
+      <Button containerClassName={ styles.button } onClick={() => navigate('/')}>На головну</Button>
     </ContentWrapper>
   );
 };

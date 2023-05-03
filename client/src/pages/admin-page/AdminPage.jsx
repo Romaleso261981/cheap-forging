@@ -26,10 +26,10 @@ export const AdminPage = () => {
               className={styles.sortBtn}
               onClick={() => setIsDescSort(!isDescSort)}
             >
-              Сортировать по цене {`${isDescSort ? "+" : "-"}`}
+              Сортувати по вартості {`${isDescSort ? "+" : "-"}`}
             </Button>
             <Link to={paths.createPlane} className={styles.createPlaneBtn}>
-              Добавить самолет
+              Добавити товар
             </Link>
           </ContentWrapper>
         </div>

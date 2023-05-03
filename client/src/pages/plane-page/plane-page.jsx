@@ -27,12 +27,12 @@ export const PlanePage = () => {
             Назад
           </Button>
           <h1 className={styles.title}>{plane.name}</h1>
-          <div className={styles.price}>{plane.price}$</div>
+          <div className={styles.price}>{plane.price} грн/кв.м</div>
           <Button
             containerClassName={styles.buyBtnContainer}
-            onClick={() => navigate('/order') }
+            onClick={() => navigate("/order")}
           >
-            Оформить заказ
+            Оформити замовлення
           </Button>
           <p className={styles.desc}>{plane.description}</p>
         </div>

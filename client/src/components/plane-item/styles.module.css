@@ -1,45 +1,58 @@
 .planeItem {
-    position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
+}
+.itemWrraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 350px;
+  max-width: 350px;
+  min-height: 400px;
+  position: relative;
+  cursor: pointer;
 }
 
 .image {
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
-    border-radius: 20px;
-    transform: scale(1.04);
+left: 23px;
+top: 10px;
+margin: 0 auto;
+  width: 335px;
+  height: 260px;
+  object-fit: cover;
+  transform: scale(1.04);
 }
 
 .capacity {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    background: linear-gradient(200.44deg, #4316DB 13.57%, #9076E7 98.38%);
-    color: #FFFFFF;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    z-index: 2;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  background: linear-gradient(200.44deg, #4316db 13.57%, #9076e7 98.38%);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  z-index: 2;
 }
 
 .info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    color: white;
-    background: rgba(50, 61, 109, 0.5);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 120px;
+  padding: 5px 10px;
+  color: white;
+  background: rgba(50, 61, 109, 0.5);
 }
 
 .title {
-    font-size: 24px;
+  font-size: 20px;
 }
 
 .price {
-    font-size: 30px;
-    font-weight: bold;
-    color: #2FB5FC;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
 }

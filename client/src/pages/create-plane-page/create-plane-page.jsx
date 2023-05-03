@@ -15,7 +15,7 @@ export const CreatePlanePage = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
-  const [capacity, setCapacity] = useState("");
+  const [code, setCode] = useState("");
   const [planeImage, setPlaneImage] = useState(null);
 
   const handleCreatePlane = useCallback(() => {
@@ -23,7 +23,7 @@ export const CreatePlanePage = () => {
     formData.append("name", name);
     formData.append("price", price);
     formData.append("description", description);
-    formData.append("capacity", capacity);
+    formData.append("code", code);
     formData.append("planeImage", planeImage);
 
     dispatch(createPlane(formData)).then((res) => {
@@ -31,7 +31,7 @@ export const CreatePlanePage = () => {
         navigate(`${paths.plane}/${res.payload._id}`, { replace: true });
       }
     });
-  }, [capacity, description, dispatch, name, navigate, planeImage, price]);
+  }, [code, description, dispatch, name, navigate, planeImage, price]);
 
   useEffect(() => () => dispatch(resetPlaneErrors()),[dispatch])
 
@@ -45,30 +45,30 @@ export const CreatePlanePage = () => {
         Назад
       </Button>
       <form className={styles.form}>
-        <h1 className={styles.title}>Создать самолет</h1>
+        <h1 className={styles.title}>Створення товару</h1>
         <Input
           name="name"
-          placeholder="Название самолёта"
+          placeholder="Категорія"
           error={errors && errors.name && errors.name.message}
           onChange={(e) => setName(e.target.value)}
         />
         <Input
           name="price"
-          placeholder="Цена самолёта"
+          placeholder="Ціна товару"
           error={errors && errors.price && errors.price.message}
           onChange={(e) => setPrice(+e.target.value)}
         />
         <Input
           name="description"
-          placeholder="Описание"
+          placeholder="Опис"
           error={errors && errors.description && errors.description.message}
           onChange={(e) => setDescription(e.target.value)}
         />
         <Input
-          name="capacity"
-          placeholder="Вместимость"
+          name="code"
+          placeholder="Код товару"
           error={errors && errors.capacity && errors.capacity.message}
-          onChange={(e) => setCapacity(e.target.value)}
+          onChange={(e) => setCode(e.target.value)}
         />
         <Input
           name="planeImage"
@@ -80,7 +80,7 @@ export const CreatePlanePage = () => {
           containerClassName={styles.buttonContainer}
           onClick={handleCreatePlane}
         >
-          Создать
+          Створити
         </Button>
       </form>
     </ContentWrapper>
